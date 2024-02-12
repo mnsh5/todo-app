@@ -4,7 +4,10 @@ Marten.configure do |config|
 
   # Installed applications
   # https://martenframework.com/docs/development/reference/settings#installed_apps
-  config.installed_apps = [] of Marten::Apps::Config.class
+  config.installed_apps = [
+    Todo::App,
+
+  ]
 
   # Application middlewares
   # https://martenframework.com/docs/development/reference/settings#middleware
@@ -18,8 +21,11 @@ Marten.configure do |config|
   # Databases
   # https://martenframework.com/docs/development/reference/settings#database-settings
   config.database do |db|
-    db.backend = :sqlite
-    db.name = Path["todo-app.db"].expand
+    db.backend = :postgresql
+    db.host = "localhost"
+    db.name = "todo"
+    db.user = "postgres"
+    db.password = "insecure"
   end
 
   # Templates context producers

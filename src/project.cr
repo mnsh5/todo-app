@@ -1,6 +1,6 @@
 # Third party requirements.
 require "marten"
-require "sqlite3"
+require "pg"
 
 # Configuration requirements.
 require "../config/routes"
@@ -9,6 +9,4 @@ require "../config/settings/**"
 require "../config/initializers/**"
 
 # Project requirements.
-require "./handlers/**"
-require "./models/**"
-require "./schemas/**"
+require "./app/todo/app"

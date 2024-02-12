@@ -8,3 +8,4 @@ require "marten/cli"
 
 # Project CLI requirements.
 require "./migrations/**"
+require "./app/todo/cli"
