@@ -1,7 +1,7 @@
 # The main routes map associates routes to handlers.
 # For more information please see: https://martenframework.com/docs/handlers-and-http/routing
 Marten.routes.draw do
-  path "/api/v1/", Todo::ROUTES, name: "todo"
+  path "/api/v1", Todo::ROUTES, name: "todo"
 
   if Marten.env.development?
     path "#{Marten.settings.assets.url}<path:path>", Marten::Handlers::Defaults::Development::ServeAsset, name: "asset"
