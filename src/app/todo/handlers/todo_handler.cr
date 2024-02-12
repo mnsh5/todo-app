@@ -1,7 +1,7 @@
 module Todo
   class TodoHandler < Marten::Handler
     def get
-      respond("Hello World!")
+      json({ foo: "bar" }, status: 200)
     end
   end
 end
