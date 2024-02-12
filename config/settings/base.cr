@@ -5,7 +5,7 @@ Marten.configure do |config|
   # Installed applications
   # https://martenframework.com/docs/development/reference/settings#installed_apps
   config.installed_apps = [
-    Todo::App,
+    TodoApp::App,
 
   ]
 

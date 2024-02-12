@@ -1,6 +1,8 @@
-require "./models/todo.cr"
+require "./handlers/**"
+require "./routes"
+require "./models/*"
 
-module Todo
+module TodoApp
   class App < Marten::App
     label :todo
   end
